@@ -1,6 +1,6 @@
 [package]
 name = "swiftsc-runtime"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 authors = ["SwiftSC-Lang Contributors"]
 description = "Runtime library for SwiftSC-Lang smart contracts"
