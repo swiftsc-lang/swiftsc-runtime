@@ -10,7 +10,9 @@ The execution environment and host interface for SwiftSC smart contracts.
 - **Simulator**: Local execution environment for rapid contract testing.
 - **WASM Integration**: Seamless bridge between host and guest environments.
 
-## 🛠️ Installation
+## 🛠️ Developer Usage
+
+`swiftsc-runtime` is available as a Rust library for developers building custom execution environments or tools.
 
 ```bash
 cargo add swiftsc-runtime
