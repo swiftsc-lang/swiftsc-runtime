@@ -1,6 +1,6 @@
-use std::collections::HashMap;
-use anyhow::Result;
 use crate::simulator::ContractSimulator;
+use anyhow::Result;
+use std::collections::HashMap;
 
 #[derive(Debug, Clone, Default)]
 pub struct SolanaAccount {
@@ -42,6 +42,12 @@ pub struct SimulatorAdapter {
     simulator: ContractSimulator,
 }
 
+impl Default for SimulatorAdapter {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl SimulatorAdapter {
     pub fn new() -> Self {
         Self {
@@ -66,6 +72,12 @@ pub struct SolanaAdapter {
     simulator: ContractSimulator,
 }
 
+impl Default for SolanaAdapter {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl SolanaAdapter {
     pub fn new() -> Self {
         Self {
@@ -87,10 +99,13 @@ impl BlockchainAdapter for SolanaAdapter {
             println!("--- Solana Conceptual Execution ---");
             println!("Program ID: {}", ctx.program_id);
             println!("Accounts: {}", ctx.accounts.len());
-            
+
             for acc in &ctx.accounts {
                 if acc.is_writable && acc.owner != ctx.program_id {
-                    return Err(anyhow::anyhow!("Cannot write to account {} not owned by program", acc.address));
+                    return Err(anyhow::anyhow!(
+                        "Cannot write to account {} not owned by program",
+                        acc.address
+                    ));
                 }
             }
         }

@@ -1,5 +1,5 @@
 /// Gas metering and cost model for SwiftSC-Lang contracts
-/// 
+///
 /// Gas costs are designed to reflect computational complexity
 /// and prevent DoS attacks through resource exhaustion.
 
@@ -60,7 +60,7 @@ impl GasMeter {
     pub fn new(limit: u64) -> Self {
         GasMeter { used: 0, limit }
     }
-    
+
     pub fn consume(&mut self, amount: u64) -> Result<(), &'static str> {
         self.used = self.used.saturating_add(amount);
         if self.used > self.limit {
@@ -69,7 +69,7 @@ impl GasMeter {
             Ok(())
         }
     }
-    
+
     pub fn remaining(&self) -> u64 {
         self.limit.saturating_sub(self.used)
     }
@@ -78,7 +78,7 @@ impl GasMeter {
 #[cfg(test)]
 mod tests {
     use super::*;
-    
+
     #[test]
     fn test_gas_meter() {
         let mut meter = GasMeter::new(100);

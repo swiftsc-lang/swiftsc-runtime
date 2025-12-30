@@ -1,9 +1,11 @@
+pub mod adapter;
 pub mod gas;
 pub mod simulator;
-pub mod adapter;
 
-pub use gas::{GasCosts, GasConfig, GasMeter};
-pub use adapter::{ContractState, BlockchainAdapter, SimulatorAdapter, SolanaAdapter, SolanaAccount, SolanaContext};
+pub use adapter::{
+    BlockchainAdapter, ContractState, SimulatorAdapter, SolanaAccount, SolanaAdapter, SolanaContext,
+};
+pub use gas::{GasConfig, GasCosts, GasMeter};
 
 /// Runtime version
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");
