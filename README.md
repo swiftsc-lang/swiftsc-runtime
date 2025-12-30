@@ -1,24 +1,25 @@
-# SwiftSC-Lang Runtime
+# ⚡ SwiftSC Runtime
 
-This directory is reserved for the blockchain runtime implementation.
+![Version](https://img.shields.io/badge/version-1.0.2--beta-blue)
 
-## Current Implementation
+The execution environment and host interface for SwiftSC smart contracts.
 
-Runtime features are currently in:
-- `/swiftsc-compiler/swiftsc-backend/src/gas.rs` - Gas metering
-- Host function definitions in codegen
+## 🚀 Features
 
-## Features
+- **Host Functions**: Interfaces for storage, gas metering, and cryptography.
+- **Simulator**: Local execution environment for rapid contract testing.
+- **WASM Integration**: Seamless bridge between host and guest environments.
 
-- Gas cost model
-- Resource limits
-- Host function interfaces
-- Storage operations
-- Event emission
+## 🛠️ Installation
 
-## Future
+```bash
+cargo add swiftsc-runtime
+```
 
-This directory may contain:
-- Standalone WASM runtime
-- Blockchain adapters
-- Runtime testing framework
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## 📄 License
+
+MIT

@@ -1,6 +1,6 @@
 [package]
 name = "swiftsc-runtime"
-version = "1.0.1"
+version = "1.0.2-beta"
 edition = "2021"
 authors = ["SwiftSC-Lang Contributors"]
 description = "Runtime library for SwiftSC-Lang smart contracts"
@@ -10,5 +10,6 @@ repository = "https://github.com/swiftsc-lang/swiftsc-runtime"
 [dependencies]
 anyhow = "1.0"
 thiserror = "1.0"
+wasmi = "0.31"
 
 [dev-dependencies]

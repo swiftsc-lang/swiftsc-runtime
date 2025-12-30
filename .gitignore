@@ -1,6 +1,6 @@
-# Rust
-target/
-**/*.rs.bk
+# Rust / WASM Standard Gitignore
+/target
+/build
 Cargo.lock
 
 # IDE
@@ -8,17 +8,12 @@ Cargo.lock
 .idea/
 *.swp
 *.swo
-*~
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Build artifacts
+# SwiftSC Specific
 *.wasm
-*.wat
-
-
-# Added by cargo
-
-/target
+*.disasm
+*.bin
