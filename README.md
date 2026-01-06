@@ -1,6 +1,6 @@
 # ⚡ SwiftSC Runtime
 
-![Version](https://img.shields.io/badge/version-1.0.3--beta-blue)
+![Version](https://img.shields.io/badge/version-1.0.3-blue)
 
 The execution environment and host interface for SwiftSC smart contracts.
 

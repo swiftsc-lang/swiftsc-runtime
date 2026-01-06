@@ -91,6 +91,16 @@ impl ContractSimulator {
             )
             .expect("failed to wrap hash_i64");
 
+        linker
+            .func_wrap(
+                "env",
+                "log_i64",
+                |_: Caller<'_, ContractState>, val: i64| {
+                    println!("[LOG] {}", val);
+                },
+            )
+            .expect("failed to wrap log_i64");
+
         Self { engine, linker }
     }
 
